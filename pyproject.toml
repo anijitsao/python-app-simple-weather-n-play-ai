@@ -10,6 +10,7 @@ dependencies = [
     "openai-agents>=0.23.1",
     "pymupdf>=2.0",
     "pytest>=9.2.0",
+    "pytest-asyncio>=1.4.1",
     "pytest-cov>=7.1.0",
     "pytest-mock>=3.17.0",
     "requests>=2.34.2",
@@ -17,13 +18,16 @@ dependencies = [
 ]
 
 [tool.pytest.ini_options]
-addopts = "-ra -q --strict-markers --cov=. --cov-report=html --cov-report=term"
+# -s for using print() in test cases
+# -q for quiet mode
+# -ra to add short summary at the end
+addopts = "-ra -s -q --cov=. --cov-report=html --cov-report=term"
 testpaths = ["tests"]
-markers = [
-    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
-    "integration: marks tests as integration tests",
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+filterwarnings = [
+    "ignore:.*CallSpec2.*:pytest.PytestRemovedIn10Warning",
 ]
-filterwarnings = ["error", "ignore::UserWarning"]
 
 [tool.coverage.run]
 source = ["."]

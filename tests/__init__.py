@@ -1,0 +1,17 @@
+from .mocked_values import (
+    ai_response_gk,
+    ai_response_weather,
+    api_connection_error,
+    city,
+    prompt_gk_question,
+    prompt_weather,
+)
+
+__all__ = [
+    "ai_response_gk",
+    "ai_response_weather",
+    "api_connection_error",
+    "city",
+    "prompt_gk_question",
+    "prompt_weather",
+]
