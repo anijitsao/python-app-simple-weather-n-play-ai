@@ -1,9 +1,7 @@
 # python-app-simple-weather-n-play-ai
 This example illustrates various concepts of Agentic AI System using [Python](https://www.python.org/) and [OpenAI Agents SDK](https://openai.github.io/openai-agents-python/). This is multiple agents system where agents can have tools, can communicate using handoffs, filter user input prompts using guardrails. User can asks for current weather about their current city (worldwide) and the system will give them suggestion about games and activities based on the weather conditions. Agents can search their Knowledge Base and predict using Retrival Augmented Generation (RAG).
 
-![Python 3.13](https://img.shields.io/badge/Python-3.13-yellow?logo=python)
-
-![FastAPI](https://img.shields.io/badge/FastAPI-green?logo=fastapi)
+![Python 3.13](https://img.shields.io/badge/Python-3.13?logo=python) ![FastAPI](https://img.shields.io/badge/FastAPI-0.162-green?logo=fastapi)
 
 ## Features 
 - Code is updated with latest version of libraries and packages.
