@@ -3,7 +3,7 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
-from src.tools import fetch_activities
+# from src.tools import fetch_activities
 from src.utils import (
     add_items,
     get_client,
