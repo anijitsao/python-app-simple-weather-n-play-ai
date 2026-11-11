@@ -11,6 +11,7 @@ async def test_fetch_weather_success(mocker):
     model = ScriptedModel(
         [
             [function_call("fetch_weather", {"city": city}, call_id="call_1")],
+            # assistant message takes only string no JSON in scripted model
             [assistant_message(json.dumps(ai_response_weather))],
         ]
     )
@@ -18,7 +19,7 @@ async def test_fetch_weather_success(mocker):
 
     result = await Runner.run(
         weather_agent,
-        "What is the weather in Tokyo?",
+        f"What is the weather in {city}?",
         run_config=RunConfig(tracing_disabled=True),
     )
 
