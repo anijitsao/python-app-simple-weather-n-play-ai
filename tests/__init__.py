@@ -4,6 +4,7 @@ from .mocked_values import (
     api_connection_error,
     city,
     ingestion_error,
+    parsed_chunks,
     prompt_gk_question,
     prompt_weather,
 )
@@ -14,6 +15,7 @@ __all__ = [
     "api_connection_error",
     "city",
     "ingestion_error",
+    "parsed_chunks",
     "prompt_gk_question",
     "prompt_weather",
 ]
