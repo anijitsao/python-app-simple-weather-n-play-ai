@@ -20,3 +20,4 @@ sqlite/
 
 # Test cases
 coverage/
+**/.coverage
